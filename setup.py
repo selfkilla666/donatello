@@ -7,7 +7,7 @@ URL = "https://github.com/selfkilla666/donatello_api"
 EMAIL = "selfkilla666@yahoo.com"
 AUTHOR = "selfkilla666"
 PYTHON_REQUIRES = ">=3.7.0"
-VERSION = "1.0.0"
+VERSION = "1.0.2"
 
 REQUIRED = ["aiohttp", "requests", "pydantic"]
 
