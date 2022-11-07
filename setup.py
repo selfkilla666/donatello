@@ -7,7 +7,7 @@ URL = "https://github.com/selfkilla666/donatello_api"
 EMAIL = "selfkilla666@yahoo.com"
 AUTHOR = "selfkilla666"
 PYTHON_REQUIRES = ">=3.7.0"
-VERSION = "1.0.2"
+VERSION = "1.0.0"
 
 REQUIRED = ["aiohttp", "requests", "pydantic"]
 
@@ -37,6 +37,11 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-        "LICENSE :: OSI APPROVED :: MIT LICENSE",
+		"LICENSE :: OSI APPROVED :: MIT LICENSE",
+		'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+		'Topic :: Utilities',
+		'Typing :: Typed',
     ]
 )
