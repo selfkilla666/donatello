@@ -28,7 +28,7 @@ setup(
     python_requires=PYTHON_REQUIRES,
     url=URL,
     download_url="",
-    packages=["donatello"],
+    packages=["donatello_api"],
     install_requires=REQUIRED,
     license="MIT License (MIT)",
     classifiers=[
