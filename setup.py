@@ -27,7 +27,7 @@ setup(
     author_email=EMAIL,
     python_requires=PYTHON_REQUIRES,
     url=URL,
-    download_url="",
+    download_url="https://github.com/selfkilla666/donatello_api/blob/main/dist/donatello_api-1.0.2.tar.gz",
     packages=["donatello_api"],
     install_requires=REQUIRED,
     license="MIT License (MIT)",
