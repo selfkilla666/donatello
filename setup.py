@@ -1,9 +1,9 @@
 
 from setuptools import setup
 
-NAME = "donatello"
+NAME = "donatello_api"
 DESCRIPTION = "🐍 Python API wrapper for Ukrainian donate service Donatello"
-URL = "https://github.com/selfkilla666/donatello"
+URL = "https://github.com/selfkilla666/donatello_api"
 EMAIL = "selfkilla666@yahoo.com"
 AUTHOR = "selfkilla666"
 PYTHON_REQUIRES = ">=3.7.0"
