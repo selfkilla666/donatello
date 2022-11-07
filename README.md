@@ -56,5 +56,6 @@ for donate in donates:
 ## In future
 
 - [ ] Add async API driver
+- [ ] Add docs
 - [ ] Longpolling / Events
 - [ ] Support new features in Donatello API 
