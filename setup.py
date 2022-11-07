@@ -37,7 +37,6 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
-		"LICENSE :: OSI APPROVED :: MIT LICENSE",
 		'Operating System :: OS Independent',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Python Modules',
