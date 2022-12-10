@@ -1,5 +1,4 @@
 
-from typing import NoReturn
 import requests
 
 
@@ -7,7 +6,7 @@ class BaseAPIDriver:
 
     API_URL = "https://donatello.to/api"
 
-    def __init__(self, version: str) -> NoReturn:
+    def __init__(self, version: str) -> None:
         self.version = version
 
     def __generate_action_url__(self, action: str) -> str:
@@ -17,7 +16,7 @@ class BaseAPIDriver:
         raise NotImplementedError
 
 class APIDriver(BaseAPIDriver):
-    def __init__(self, version: str) -> NoReturn:
+    def __init__(self, version: str) -> None:
         super().__init__(version)
 
     def call_action(self, action: str, headers: dict, *, params: dict = {}, method: str = "get") -> requests.Response:

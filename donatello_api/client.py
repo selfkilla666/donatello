@@ -1,14 +1,14 @@
 
-from typing import NoReturn
+from __future__ import annotations
 
-from donatello.driver import APIDriver
-from donatello.exceptions import *
-from donatello.models import *
+from donatello_api.driver import APIDriver
+from donatello_api.exceptions import *
+from donatello_api.models import *
 
 
 class Donatello:
 
-    def __init__(self, token: str, *, version: str = "v1") -> NoReturn:
+    def __init__(self, token: str, *, version: str = "v1") -> None:
         self.__user_token__ = token
         self.__api_driver__ = APIDriver(version=version)
 
@@ -55,7 +55,7 @@ class Donatello:
         if response.status_code == 401:
             raise AuthenticateError(response.json()["message"])
 
-        return DonateList.parse_raw(response.content)
+        return DonateList.parse_obj(response.json())
 
     def get_clients(self) -> ClientList:
         """
@@ -73,4 +73,4 @@ class Donatello:
         if response.status_code == 401:
             raise AuthenticateError(response.json()["message"])
 
-        return ClientList.parse_raw(response.content)
+        return ClientList.parse_obj(response.json())

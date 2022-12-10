@@ -3,7 +3,7 @@
 
 ![Made with Python](https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version: 1.0.2](https://img.shields.io/badge/version-1.0.2-white)
+![Version: 1.0.3](https://img.shields.io/badge/version-1.0.3-white)
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 🐍 Unofficial Python wrapper for working with the API of the Ukrainian service for donations [Donatello](https://donatello.to/)
