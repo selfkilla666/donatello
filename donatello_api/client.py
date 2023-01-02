@@ -7,6 +7,7 @@ from donatello_api.models import *
 
 
 class Donatello:
+    """ Клас клієнта для роботи з API Donatello """
 
     def __init__(self, token: str, *, version: str = "v1") -> None:
         self.__user_token__ = token

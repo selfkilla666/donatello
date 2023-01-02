@@ -1,18 +1,20 @@
 
 from __future__ import annotations
-from typing import Optional, List, Sequence
+from typing import Optional, List, Sequence, Dict, Any
 from datetime import datetime as Datetime
 from pydantic import BaseModel, Field, validator
 
 
 class UserDonates(BaseModel):
+
     total_amount: int = Field(alias="totalAmount")
     total_count: int = Field(alias="totalCount")
 
-    def __repr__(self) -> dict:
+    def __repr__(self) -> Dict[str, Any]:
         return self.dict()
 
 class User(BaseModel):
+
     nickname: str = Field(alias="nickname")
     id: str = Field(alias="pubId")
     page: str = Field(alias="page")
@@ -28,18 +30,19 @@ class User(BaseModel):
     def __str__(self) -> str:
         return f"<User:{self.id}>"
 
-    def __repr__(self) -> dict:
+    def __repr__(self) -> Dict[str, Any]:
         return self.dict()
 
 class Donate(BaseModel):
-    id: str = Field(alias="pubId")
-    client_name: str = Field(alias="clientName")
-    message: str = Field(alias="message")
-    amount: int = Field(alias="amount")
-    currency: str = Field(alias="currency")
-    goal: str = Field(alias="goal", default="")
-    is_published: bool = Field(alias="isPublished")
-    created_at: Datetime = Field(alias="createdAt")
+
+    id: Optional[str] = Field(alias="pubId")
+    client_name: Optional[str] = Field(alias="clientName")
+    message: Optional[str] = Field(alias="message")
+    amount: Optional[int] = Field(alias="amount")
+    currency: Optional[str] = Field(alias="currency")
+    goal: Optional[str] = Field(alias="goal", default="")
+    is_published: Optional[bool] = Field(alias="isPublished")
+    created_at: Optional[Datetime] = Field(alias="createdAt")
 
     @validator("created_at", pre=True)
     def validate_created_at(cls, value) -> Datetime:
@@ -48,13 +51,14 @@ class Donate(BaseModel):
     def __str__(self) -> str:
         return f"<Donate:{self.id}>"
 
-    def __repr__(self) -> dict:
+    def __repr__(self) -> Dict[str, Any]:
         return self.dict()
 
     def __lt__(self: Donate, other: Donate) -> bool:
-        return self.currency < other.currency
+        return self.amount < other.amount
 
 class DonateList(BaseModel):
+
     content: Optional[List[Donate]] = Field(alias="content")
     page: Optional[int] = Field(alias="page")
     size: Optional[int] = Field(alias="size")
@@ -67,8 +71,11 @@ class DonateList(BaseModel):
         for element in self.content:
             yield element
 
-    def __repr__(self) -> List[Donate]:
-        return self.content
+    def __getitem__(self, item: int) -> Donate:
+        return self.content[item]
+
+    def __repr__(self) -> Dict[str, Any]:
+        return self.dict()
 
     def __len__(self) -> int:
         return len(self.content)
@@ -77,24 +84,29 @@ class DonateList(BaseModel):
         return f"<DonateList: {self.content}>"
 
 class Client(BaseModel):
-    client_name: str = Field(alias="clientName")
-    total_amount: int = Field(alias="totalAmount")
 
-    def __repr__(self) -> dict:
+    client_name: Optional[str] = Field(alias="clientName")
+    total_amount: Optional[int] = Field(alias="totalAmount")
+
+    def __repr__(self) -> Dict[str, Any]:
         return self.dict()
 
     def __lt__(self: Client, other: Client) -> bool:
         return self.total_amount < other.total_amount
 
 class ClientList(BaseModel):
-    clients = Optional[List[Client]] = Field(alias="clients", default=[])
+
+    clients: Optional[List[Client]] = Field(alias="clients", default=[])
 
     def __iter__(self) -> Sequence[Client]:
         for element in self.clients:
             yield element
 
-    def __repr__(self) -> List[Client, None]:
-        return self.clients
+    def __getitem__(self, item: int) -> Client:
+        return self.clients[item]
+
+    def __repr__(self) -> Dict[str, Any]:
+        return self.dict()
 
     def __len__(self) -> int:
         return len(self.clients)
