@@ -1,8 +1,9 @@
 [project]
-name = "donatello_api"
-version = "1.0.4"
+name = "donatello"
+version = "1.0.5"
 authors = [
-  { name="selfkilla666", email="selfkilla666@yahoo.com" },
+    { name="selfkilla666", email="selfkilla666@yahoo.com" },
+    { name="Beengoo", email="olddft@gmail.com" }
 ]
 description = "🐍 Python API wrapper for Ukrainian donate service Donatello"
 readme = "README.md"
@@ -15,6 +16,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -23,4 +25,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/selfkilla666/donatello_api/"
+"Homepage" = "https://github.com/selfkilla666/donatello/"

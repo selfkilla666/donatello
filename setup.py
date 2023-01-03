@@ -1,13 +1,13 @@
 
 from setuptools import setup
 
-NAME = "donatello_api"
+NAME = "donatello"
 DESCRIPTION = "🐍 Python API wrapper for Ukrainian donate service Donatello"
-URL = "https://github.com/selfkilla666/donatello_api"
-EMAIL = "selfkilla666@yahoo.com"
-AUTHOR = "selfkilla666"
+URL = "https://github.com/selfkilla666/donatello"
+EMAIL = "selfkilla666@yahoo.com & olddft@gmail.com"
+AUTHOR = "selfkilla666 & Beengoo"
 PYTHON_REQUIRES = ">=3.7.0"
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 
 REQUIRED = ["aiohttp", "requests", "pydantic"]
 
@@ -27,8 +27,8 @@ setup(
     author_email=EMAIL,
     python_requires=PYTHON_REQUIRES,
     url=URL,
-    download_url="https://github.com/selfkilla666/donatello_api/blob/main/dist/donatello_api-1.0.4.tar.gz",
-    packages=["donatello_api"],
+    download_url="https://github.com/selfkilla666/donatello/blob/main/dist/donatello-1.0.5.tar.gz",
+    packages=["donatello"],
     install_requires=REQUIRED,
     license="MIT License (MIT)",
     classifiers=[
@@ -38,6 +38,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
 		"Operating System :: OS Independent",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",

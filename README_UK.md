@@ -1,17 +1,18 @@
-# Donatello API
+# Donatello.py
 
 
 ![Made with Python](https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version: 1.0.4](https://img.shields.io/badge/version-1.0.4-white)
+![Version: 1.0.5](https://img.shields.io/badge/version-1.0.5-white)
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/donatello-api?color=succeses&logo=Pypi&logoColor=white)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/donatello?color=succeses&logo=Pypi&logoColor=white)
+![Python version: 3.7 | 3.8 | 3.9 | 3.10 | 3.11](https://img.shields.io/pypi/pyversions/donatello_api?color=blue&label=Python%20version)
 
 🐍 Неофіційна бібліотека Python для роботи з українським сервісом донатів [Donatello](https://donatello.to/)
 
-Ви можете підтримати розробника [тут](https://donatello.to/selfkilla666) =)
-
-[English version](https://github.com/selfkilla666/donatello_api/blob/main/README.md)
+[GitHub](https://github.com/selfkilla666/donatello/) | [PyPI](https://pypi.org/project/donatello/) | [Discord server](https://discord.gg/donatello-498101952333479956)
+<br>
+[English version](https://github.com/selfkilla666/donatello/blob/main/README.md)
 
 ---
 
@@ -19,7 +20,7 @@
 
 Перед початком вам потрібно зробити декілька кроків
 1) Вам потрібно увімкнути функціонал API та отримати ваш токен для роботи з ним. Усе це можна зробити у налаштуванні, у вкладці "**Про API**".
-2) Інсталювати бібліотеку для роботи з API, використавши команду `pip install donatello-api` у консолі.
+2) Інсталювати бібліотеку для роботи з API, використавши команду `pip install donatello` у консолі.
 
 ### Отримати інформацію про себе
 
@@ -27,7 +28,7 @@
 
 ```python
 
-from donatello_api import Donatello
+from donatello import Donatello
 
 
 token = "<Ваш токен тут>"
@@ -46,7 +47,7 @@ print(me.nickname)
 
 ```python
 
-from donatello_api import Donatello
+from donatello import Donatello
 
 
 token = "<Ваш токен тут>"
@@ -66,7 +67,7 @@ for donate in donates:
 
 ```python
 
-from donatello_api import Donatello
+from donatello import Donatello
 
 
 token = "<Ваш токен тут>"
