@@ -89,3 +89,4 @@ for donator in donators:
 - [ ] Add docs
 - [ ] Longpolling / Events
 - [ ] Support new features in Donatello API 
+- [ ] CI tests on GitHub Actions
