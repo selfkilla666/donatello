@@ -3,16 +3,13 @@
 
 ![Made with Python](https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Version: 1.0.5](https://img.shields.io/badge/version-1.0.5-white)
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Version: 1.0.7](https://img.shields.io/badge/version-1.0.7-red)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/donatello?color=succeses&logo=Pypi&logoColor=white)
-![Python version: 3.7 | 3.8 | 3.9 | 3.10 | 3.11](https://img.shields.io/pypi/pyversions/donatello_api?color=blue&label=Python%20version)
 
 🐍 Unofficial Python wrapper for working with the API of the Ukrainian service for donations [Donatello](https://donatello.to/)
 
 [GitHub](https://github.com/selfkilla666/donatello/) | [PyPI](https://pypi.org/project/donatello/) | [Discord server](https://discord.gg/donatello-498101952333479956)
 <br>
-[Українська версія](https://github.com/selfkilla666/donatello/blob/main/README_UK.md)
 
 ---
 
@@ -36,7 +33,7 @@ client = Donatello(token)
 
 me = client.get_me()
 
-# print your account nickname
+# Print your account nickname
 print(me.nickname)
 
 ```
@@ -53,8 +50,7 @@ from donatello import Donatello
 token = "<YOUR TOKEN HERE>"
 client = Donatello(token)
 
-# size = 5 - get 5 last donates
-donates = client.get_donates(size = 5)
+donates = client.get_donates(size = 5) # "size = 5" - Get 5 last donates
 
 for donate in donates:
     print(f"{donate.client_name}: {donate.message}")
@@ -88,5 +84,3 @@ for donator in donators:
 - [ ] Add async API driver
 - [ ] Add docs
 - [ ] Longpolling / Events
-- [ ] Support new features in Donatello API 
-- [ ] CI tests on GitHub Actions

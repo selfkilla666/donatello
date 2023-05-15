@@ -1,28 +1,48 @@
 [project]
 name = "donatello"
-version = "1.0.5"
+version = "1.0.7"
 authors = [
     { name="selfkilla666", email="selfkilla666@yahoo.com" },
     { name="Beengoo", email="olddft@gmail.com" }
 ]
 description = "🐍 Python API wrapper for Ukrainian donate service Donatello"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 dependencies = ['aiohttp', 'requests', 'pydantic']
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
-    "Operating System :: OS Independent",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Utilities",
-    "Typing :: Typed"
+    "Operating System :: OS Independent"
 ]
 
 [project.urls]
 "Homepage" = "https://github.com/selfkilla666/donatello/"
+
+[tool.poetry]
+name = "donatello"
+version = "1.0.7"
+description = "Python API wrapper for Ukrainian donate service Donatello"
+authors = ["selfkilla666 <selfkilla666yahoo.com>", "Beengoo <olddft@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "donatello"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiohttp = "^3.8.4"
+pydantic = "^1.10.7"
+requests = "^2.28.2"
+types-requests = "^2.28.11.17"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.2.0"
+python-dotenv = "^1.0.0"
+
+[build-system]
+requires = ['setuptools>=42']
+build-backend = 'setuptools.build_meta'

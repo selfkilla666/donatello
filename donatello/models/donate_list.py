@@ -1,20 +1,24 @@
+# https://github.com/selfkilla666/donatello
+# Code by selfkilla666
+# MIT License
+
 
 from __future__ import annotations
-from typing import Dict, List, Sequence, Any, Optional
+from typing import Dict, List, Sequence, Union
 from pydantic import BaseModel, Field
 
-from donatello.models import Donate
+from .donate import Donate
 
 
 class DonateList(BaseModel):
 
-    content: Optional[List[Donate]] = Field(alias="content")
-    page: Optional[int] = Field(alias="page")
-    size: Optional[int] = Field(alias="size")
-    num: Optional[int] = Field(alias="num", default=0)
-    first: Optional[bool] = Field(alias="first")
-    last: Optional[bool] = Field(alias="last")
-    total: Optional[int] = Field(alias="total")
+    content: List[Donate] = Field(alias="content", default=[])
+    page: int = Field(alias="page", default=0)
+    size: int = Field(alias="size", default=20)
+    num: int = Field(alias="num", default=0)
+    first: bool = Field(alias="first")
+    last: bool = Field(alias="last")
+    total: int = Field(alias="total")
 
     def __iter__(self) -> Sequence[Donate]:
         for element in self.content:
@@ -23,11 +27,11 @@ class DonateList(BaseModel):
     def __getitem__(self, item: int) -> Donate:
         return self.content[item]
 
-    def __repr__(self) -> Dict[str, Any]:
+    def __repr__(self) -> Dict[str, Union[int, bool, List[Donate]]]:
         return self.dict()
 
     def __len__(self) -> int:
         return len(self.content)
 
     def __str__(self) -> str:
-        return f"<DonateList: {self.content}>"
+        return f"{self.dict()}"

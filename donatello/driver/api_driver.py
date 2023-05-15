@@ -1,3 +1,7 @@
+# https://github.com/selfkilla666/donatello
+# Code by selfkilla666
+# MIT License
+
 
 from __future__ import annotations
 from requests import request

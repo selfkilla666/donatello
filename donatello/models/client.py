@@ -1,15 +1,19 @@
+# https://github.com/selfkilla666/donatello
+# Code by selfkilla666
+# MIT License
+
 
 from __future__ import annotations
-from typing import Dict, Any, Optional
+from typing import Dict, Union
 from pydantic import BaseModel, Field
 
 
 class Client(BaseModel):
 
-    client_name: Optional[str] = Field(alias="clientName")
-    total_amount: Optional[int] = Field(alias="totalAmount")
+    client_name: str = Field(alias="clientName")
+    total_amount: int = Field(alias="totalAmount")
 
-    def __repr__(self) -> Dict[str, Any]:
+    def __repr__(self) -> Dict[str, Union[str, int]]:
         return self.dict()
 
     def __str__(self) -> str:

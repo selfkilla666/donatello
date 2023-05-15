@@ -1,10 +1,14 @@
+# https://github.com/selfkilla666/donatello
+# Code by selfkilla666
+# MIT License
+
 
 from __future__ import annotations
-from typing import Dict, Any
+from typing import Dict, Union
 from datetime import datetime as Datetime
 from pydantic import BaseModel, Field, validator
 
-from donatello.models import UserDonates
+from .user_donates import UserDonates
 
 
 class User(BaseModel):
@@ -24,5 +28,5 @@ class User(BaseModel):
     def __str__(self) -> str:
         return f"{self.dict()}"
 
-    def __repr__(self) -> Dict[str, Any]:
+    def __repr__(self) -> Dict[str, Union[str, bool, UserDonates, Datetime]]:
         return self.dict()
